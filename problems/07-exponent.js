@@ -20,39 +20,36 @@ exponent(2, -2); // 1/4 (or 0.25)
 exponent(5, 5); // 3125
 ***********************************************************************/
 
-function exponent(num, power, num2 = 1) {
-    // Your code here
-    
+function exponent(num, power, num2 = 1) { // (num === 2, power === -2, num2 === 1)
+    debugger
     if (power === 1) {
+        debugger
         return num2
-
     }
-
-
-    if (power < 0) {
-        power = -1 * power
-        num = 1 / num
-
+    debugger
+    if (power < 0) { // if power is negative
+        debugger
+        power = -1 * power // convert power to positive
+        num = 1 / num // convert integer to fraction/decimal
+        debugger
     }
-
-    if (num2 < num || num < 1) {
-        num2 = num
-
+    debugger
+    if (num2 < num || num < 1) { // checks if accumulator is smaller than num, or if num is a deciaml
+        debugger
+        num2 = num // sets accumulator value to num (basically checking if it's the first iteration or if the power was negative)
+        debugger
     }
-
-        num2 *= num
-
-
+    debugger
+    num2 *= num
     power -= 1
-
-
+    debugger
 
     return exponent(num, power, num2)
 }
 
-console.log(exponent(3, 2)); // 9
-console.log(exponent(2, -2)); // 1/4 (or 0.25)
-console.log(exponent(5, 5)); // 3125
+// console.log(exponent(3, 2)); // 9
+console.log(exponent(2, -3)); // 1/4 (or 0.25)
+// console.log(exponent(5, 5)); // 3125
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

@@ -20,7 +20,7 @@ exponentiation in your solution.
 
 Examples:
 
-advancedExponent(2, 0); // 1
+advancedExponent(2, 0); // 1 //    (2 to the power of 0/2) to the power of 2
 advancedExponent(2, 1); // 2
 advancedExponent(2, 2); // 4
 advancedExponent(2, 3); // 8
@@ -29,8 +29,8 @@ advancedExponent(2, 5); // 32
 advancedExponent(2, 6); // 64
 advancedExponent(2, 7); // 128
 advancedExponent(2, 8); // 256
-advancedExponent(2, 9); // 512
-advancedExponent(2, 10); // 1024
+advancedExponent(2, 9); // 512 //     ( 2 ^ (9/2) ) ^ 2
+advancedExponent(2, 10); // 1024        b     n
 advancedExponent(2, 11); // 2048
 advancedExponent(2, 12); // 4096
 
@@ -41,7 +41,7 @@ times `advancedExponent` is being recursively called.
 
 
 function advancedExponent(b, n) {
-  // Your code here
+  return b ** n
 }
 
 
