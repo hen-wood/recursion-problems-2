@@ -15,6 +15,20 @@ addToTwelve([1]); // false
 
 function addToTwelve(arr) {
   // Your code here
+  if (arr.length <= 1) {
+    return false
+
+  }
+
+  let num = arr.pop()
+
+  let lastNum = arr[arr.length - 1]
+  if (num + lastNum === 12) {
+    return true
+
+  }
+  return addToTwelve(arr)
+
 }
 
 
